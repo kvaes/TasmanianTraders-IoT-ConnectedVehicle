@@ -1,0 +1,18 @@
+{
+  "name": "tasmanian-traders-iot-connected-vehicle",
+  "version": "1.0.0",
+  "description": "Demo Bot for a Connected Vehicle Demo",
+  "author": "Karim Vaes <github@kvaes.be>",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "uuid": "*",
+	"infinite-loop": "*",
+	"dateformat": "*",
+	"azure-iothub": "*",
+	"azure-iot-device-http": "*",
+	"azure-iot-device": "*"    
+  }
+}

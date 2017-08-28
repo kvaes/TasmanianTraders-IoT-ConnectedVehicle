@@ -3,10 +3,10 @@ var connectionString = process.env.iothubconnectionstring;
 var delayMin = 0; //seconds
 var delayMax = 1; //seconds
 var delayDiff = delayMax - delayMin;
-var offlineMin = 0; // min skip # iterations 
-var offlineMax = 10; // max skip & iterations
+var offlineMin = process.env.offlineMin;; // min skip # iterations 
+var offlineMax = process.env.offlineMax;; // max skip & iterations
 var offlineDiff = offlineMax - offlineMin;
-var interval = 15; //seconds
+var interval = process.env.interval;; //seconds
 var sendInterval = interval * 1000;
 
 // Load Libraries
