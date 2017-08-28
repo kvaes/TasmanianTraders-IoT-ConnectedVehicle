@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 COPY app.js /usr/src/app/
 COPY package.json /usr/src/app/
 
-ENV connectionString your-iothubowner-connectionstring
+ENV iothubconnectionstring your-iothubowner-connectionstring
 ENV offlineMin 0
 ENV offlineMax 1
 ENV interval 15
