@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  alwaysconnected:
+    image: kvaes/tasmaniantraders-iot-connectedvehicle:latest
+    environment:
+      - iothubconnectionstring="test"
+      - offlineMin=0
+      - offlineMax=1
+      - interval=15
+    deploy:
+      mode: replicated
+      replicas: 100 
+   badlyconnected:
+    image: kvaes/tasmaniantraders-iot-connectedvehicle:latest
+    environment:
+      - iothubconnectionstring="test"
+      - offlineMin=10
+      - offlineMax=60
+      - interval=15
+    deploy:
+      mode: replicated
+      replicas: 10 
+      
