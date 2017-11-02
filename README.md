@@ -24,7 +24,7 @@ You can check the status of the container using:
 
 ## Kubernetes
 
-To deploy this sim scalable into a Kubernetes cluster (like [AKS](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster).
+To deploy this sim scalable into a Kubernetes cluster (like [AKS](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster)).
 
 * `kubectl create -f k8s-manifest.yml`
 * `kubectl scale --replicas=1000 deployment/tt-iot-vechicle`
