@@ -21,3 +21,11 @@ interval=15
 You can check the status of the container using:
 * `az container show --resource-group RESOURCE_GROUP --name NAME`
 * `az container logs --resource-group RESOURCE_GROUP --name NAME`
+
+## Kubernetes
+
+To deploy this sim scalable into a Kubernetes cluster (like [AKS](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster).
+
+* `kubectl create -f k8s-manifest.yml`
+* `kubectl scale --replicas=1000 deployment/tt-iot-vechicle`
+* `kubectl get deployments`
