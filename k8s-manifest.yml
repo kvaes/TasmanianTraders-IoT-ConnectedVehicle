@@ -1,0 +1,28 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: tt-iot-vechicle
+spec:
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  minReadySeconds: 5
+  template:
+    metadata:
+      labels:
+        app: tt-iot-vechicle
+    spec:
+      containers:
+      - name: tt-iot-vechicle
+        image: kvaes/tasmaniantraders-iot-connectedvehicle
+        env:
+        - name: iothubconnectionstring
+          value: "azure-iot-hub-connectionstring"
+        - name: interval
+          value: "1"
+        - name: offlineMin
+          value: "0"
+        - name: offlineMax
+          value: "1"
